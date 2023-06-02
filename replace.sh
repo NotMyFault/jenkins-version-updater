@@ -10,13 +10,13 @@ find . -name 'pom.xml' -type f -exec $sed -i'' -e '
     /<artifactId>bom-2.361.x<\/artifactId>/{
         N
         /<artifactId>[^<]*<\/artifactId>/{
-            s/<artifactId>[^<]*<\/artifactId>/<artifactId>bom-2.375.x<\/artifactId>/
+            s/<artifactId>[^<]*<\/artifactId>/<artifactId>bom-2.387.x<\/artifactId>/
         }
     }
     /<jenkins.version>2.361.4<\/jenkins.version>/{
         N
         /<jenkins.version>[^<]*<\/jenkins.version>/{
-            s/<jenkins.version>[^<]*<\/jenkins.version>/<jenkins.version>2.375.4<\/jenkins.version>/
+            s/<jenkins.version>[^<]*<\/jenkins.version>/<jenkins.version>2.387.3<\/jenkins.version>/
         }
     }
 ' {} +
