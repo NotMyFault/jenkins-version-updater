@@ -2,7 +2,7 @@
 
 # Set the GitHub organization and search query
 ORG="jenkinsci"
-QUERY="bom-2.361.x+extension:xml+org:$ORG"
+QUERY="bom-2.361.x+\"<jenkins.version>2.361.4</jenkins.version>\"+extension:xml+org:$ORG"
 
 if [[ -z ${GITHUB_TOKEN} ]]; then
   echo 'Error: the GITHUB_TOKEN env var is not set.' >&2
