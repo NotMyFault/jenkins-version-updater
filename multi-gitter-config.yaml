@@ -12,8 +12,8 @@ branch: jenkins-version-2.361-to-2.387
 conflict-strategy: replace
 
 # Comment this out if you don't have permissions on the repository
-#labels:
-# - dependencies
+labels:
+ - dependencies
 
 # The level of logging that should be made. Available values: trace, debug, info, error.
 log-level: info
