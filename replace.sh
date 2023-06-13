@@ -7,16 +7,22 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 find . -name 'pom.xml' -type f -exec $sed -i'' -e '
-    /<artifactId>bom-2.361.x<\/artifactId>/{
+    /<artifactId>hamcrest-core<\/artifactId>/{
         N
         /<artifactId>[^<]*<\/artifactId>/{
-            s/<artifactId>[^<]*<\/artifactId>/<artifactId>bom-2.387.x<\/artifactId>/
+            s/<artifactId>[^<]*<\/artifactId>/<artifactId>hamcrest<\/artifactId>/
         }
     }
-    /<jenkins.version>2.361.4<\/jenkins.version>/{
+    /<artifactId>hamcrest-all<\/artifactId>/{
         N
-        /<jenkins.version>[^<]*<\/jenkins.version>/{
-            s/<jenkins.version>[^<]*<\/jenkins.version>/<jenkins.version>2.387.3<\/jenkins.version>/
+        /<artifactId>[^<]*<\/artifactId>/{
+            s/<artifactId>[^<]*<\/artifactId>/<artifactId>hamcrest<\/artifactId>/
+        }
+    }
+    /<artifactId>hamcrest-library<\/artifactId>/{
+        N
+        /<artifactId>[^<]*<\/artifactId>/{
+            s/<artifactId>[^<]*<\/artifactId>/<artifactId>hamcrest<\/artifactId>/
         }
     }
 ' {} +
