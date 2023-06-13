@@ -3,7 +3,7 @@
 # The maximum number of concurrent runs.
 concurrent: 1
 
-branch: replace-deprecated-hamcrest-modules
+branch: hamcrest
 
 # What should happen if the branch already exist.
 # Available values:
@@ -22,7 +22,7 @@ log-level: info
 ### Needed to operate on repositories where you don't have enough permissions
 fork: true
 
-commit-message: Replace deprecated 'hamcrest-*' modules with 'hamcrest'
+commit-message: Update hamcrest
 pr-body: |
   _🤖 This is an automatic PR for replacing the deprecated 'hamcrest-*' modules with 'hamcrest'._
 
@@ -34,7 +34,7 @@ pr-body: |
   _[script source](https://github.com/NotMyFault/jenkins-version-updater)_
 # # # The name, including owner of a GitHub repository in the format "ownerName/repoName".
 repo:
-  - jenkinsci/console-column-plugin
+- jenkinsci/foobar
 
 # Skip changes on specified repositories, the name is including the owner of repository in the format "ownerName/repoName".
 skip-repo: []
